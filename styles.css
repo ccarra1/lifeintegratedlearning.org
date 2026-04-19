@@ -96,7 +96,6 @@ footer {
 }
 .wrapper {
     width: 90%;
-    min-width: 300px;
     max-width: 1205px;
     margin: 0 auto;
 }
@@ -108,12 +107,16 @@ main > section:nth-of-type(2) {
     background-color: var(--Access-ivory);
     padding-bottom: 2rem;
 }
-main > section:first-of-type section {
+main > section:first-of-type section, main > section:nth-of-type(2) section  {
     background-color: var(--Inquiry-indigo);
     margin: 1rem 0;
     border-radius: .5rem;
     color: var(--Potential);
     padding: 1rem;
+}
+main > section:nth-of-type(2) section {
+    background-color: var(--Catalyst-orange);
+    color: var(--Systems-gray);
 }
 svg {
     max-width: 100%;
@@ -166,7 +169,7 @@ h3 {
     font-size: 1.25em;
     padding-top: 1.5rem;
 }
-nav h2, #social h2 {
+nav h2, #social h2, .hidden {
     visibility: hidden;
     height: 1px;
     width: 1px;
@@ -192,6 +195,11 @@ nav li a, main a, footer a {
 }
 main a, footer a {
     margin: 1.5rem 0;
+}
+#quote img {
+    width:5.5rem;
+    position:relative;
+    top:2.5rem;
 }
 a[href="mailto:christina.carrasquilla@gmail.com"]  {
     margin: 1.5rem 0;
@@ -243,10 +251,6 @@ main > section:first-of-type section p {
     header img {
         display: block;
         padding-right: 1rem;
-    }
-    #quote {
-        display: flex;
-        justify-content: center;
     }
     .card {
         display: grid;
