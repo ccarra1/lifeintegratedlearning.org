@@ -87,6 +87,13 @@ nav ul {
     grid-template-columns: 1fr;
     gap: 1rem;
 }
+nav li a[href="#top"] {
+    border-radius:1rem 0 0 0;
+    width:5rem;
+    position:fixed;
+    bottom:0;
+    right:0;
+}
 footer {
     background-color: var(--Intelligence-blue);
     color: var(--Access-ivory);
@@ -285,6 +292,14 @@ article a:visited {
 }
 .links-out:hover {
     border-bottom:2px solid var(--Catalyst-orange);
+}
+article, #transcript {
+    max-width:800px
+}
+/* -------------------- VIDEO STYLES -------------------- */
+video {
+    border-radius:1rem;
+    margin:2rem 0;
 }
 /* ---------------------------------------- MEDIA QUERY FOR MEDIUM STYLES---------------------------------------- */
 @media screen and (min-width:550px) {
