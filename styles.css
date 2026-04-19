@@ -84,7 +84,7 @@ nav {
 }
 nav ul {
     display: grid;
-    grid-template-columns:1fr;
+    grid-template-columns: ;
     gap: 1rem;
 }
 footer {
@@ -180,7 +180,7 @@ nav a#active {
     border-bottom: 3px solid var(--Systems-gray);
     border-radius: 0;
 }
-nav li a, main a, footer a {
+nav li a, footer a {
     background-color: var(--Catalyst-orange);
     border-radius: .5rem;
     line-height: inherit;
@@ -190,8 +190,10 @@ nav li a, main a, footer a {
     font-size: 1.25em;
     color: var(--Systems-gray);
     padding: .5rem;
-    display:inline-flex;
+    display:flex;
     align-items:center;
+    gap:.5rem;
+    width:90%;
 }
 main a, footer a {
     margin: 1.5rem 0;
