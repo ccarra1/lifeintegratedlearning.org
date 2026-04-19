@@ -261,6 +261,12 @@ article ol {
 article ol li {
     margin-bottom: 1rem;
 }
+article a {
+    color:var(--Intelligence-blue);
+}
+article a:hover {
+    color:var(--Catalyst-orange);
+}
 article a:visited {
     color:var(--Inquiry-indigo);
 } 
