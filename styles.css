@@ -75,6 +75,21 @@ html, body {
     overflow-x: hidden;
     max-width: 100%;
 }
+/* -------------------- SR-ONLY -------------------- */
+.sr-only {
+    position: absolute;
+    transform: translateY(-100%);
+    background:var(--Inquiry-indigo);
+    padding: 1rem;
+    position: absolute;
+    transition: transform 0.3s;
+    font-size:1rem;
+    color:var(--Catalyst-orange);
+}
+.sr-only:focus {
+    transform: translateY(0%);
+    outline:2px solid var(--Potential);
+}
 /* -------------------- HEADER -------------------- */
 header {
     background-color: var(--Intelligence-blue);
@@ -252,7 +267,7 @@ h1 span {
 }
 h2 {
     font-size: 1.5em;
-    padding-top: 3rem;
+    padding-top: 2rem;
 }
 header h2 {
     padding-top:.5rem;
@@ -317,9 +332,6 @@ article ol {
     list-style:decimal;
     margin-left:1rem;
     margin-top: 1rem;
-}
-article ol li {
-    margin-bottom: 1rem;
 }
 article a {
     color:var(--Intelligence-blue);
