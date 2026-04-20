@@ -79,7 +79,7 @@ html, body {
 .sr-only {
     position: absolute;
     transform: translateY(-100%);
-    background:var(--Inquiry-indigo);
+    background:var(--Intelligence-blue);
     padding: 1rem;
     position: absolute;
     transition: transform 0.3s;
@@ -92,8 +92,23 @@ html, body {
 }
 /* -------------------- HEADER -------------------- */
 header {
-    background-color: var(--Intelligence-blue);
+    background-color: var(--Inquiry-indigo);
+    color:var(--Potential);
     padding-bottom: 2rem;
+}
+h1 {
+    font-size:3em;
+    padding-top: 3rem;
+}
+h1 span {
+    font-size:.75em;
+    font-weight:normal;
+    font-family: dolly-new, sans-serif;
+}
+header h2 {
+    padding-top:.5rem;
+    font-family: dolly-new, sans-serif;
+    color:var(--Potential);
 }
 /* -------------------- NAV -------------------- */
 nav {
@@ -129,7 +144,8 @@ label span:after {
     top: -.75rem;
 }
 input {
-    display:none;
+    visibility:hidden;
+    height:0;
 }
 input:checked ~ ul {
     max-height: 500px;
@@ -209,7 +225,7 @@ main > section:nth-of-type(2) {
     padding-bottom: 2rem;
 }
 main > section:first-of-type section, main > section:nth-of-type(2) section  {
-    background-color: var(--Inquiry-indigo);
+    background-color: var(--Intelligence-blue);
     margin: 1rem 0;
     border-radius: .5rem;
     color: var(--Potential);
@@ -227,7 +243,7 @@ main > section:first-of-type section p {
 }
 /* -------------------- FOOTER -------------------- */
 footer {
-    background-color: var(--Intelligence-blue);
+    background-color: var(--Inquiry-indigo);
     color: var(--Access-ivory);
 }
 footer {
@@ -256,23 +272,11 @@ a[href="mailto:christina.carrasquilla@asu.edu"]  {
 h1, h2, h3, h4 {
     font-family: lust, cursive;
 }
-h1 {
-    font-size:3em;
-    padding-top: 3rem;
-}
-h1 span {
-    font-size:.75em;
-    font-weight:normal;
-    font-family: dolly-new, sans-serif;
-}
+
 h2 {
-    font-size: 1.5em;
+    font-size: 1.75em;
     padding-top: 2rem;
-}
-header h2 {
-    padding-top:.5rem;
-    font-family: dolly-new, sans-serif;
-    color:var(--Potential);
+    line-height:1.25;
 }
 h3 {
     font-size: 1.25em;
@@ -302,6 +306,9 @@ q {
     padding: 1rem 0;
     color: var(--Inquiry-indigo);
 }
+i {
+    font-style:italic;
+}
 strong {
     font-weight:bold;
 }
@@ -330,8 +337,7 @@ article ul {
 }
 article ol {
     list-style:decimal;
-    margin-left:1rem;
-    margin-top: 1rem;
+    margin:1rem 0 1rem 1rem;
 }
 article a {
     color:var(--Intelligence-blue);
@@ -393,7 +399,7 @@ video {
         bottom:3rem;
     }
     label, label span, input {
-        display:none;
+        visibility:hidden;
         height:0;
     }
 }
