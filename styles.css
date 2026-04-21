@@ -61,6 +61,7 @@ table {
     --Infrastructure-gray: #D9D9D9;
     --Catalyst-orange: #FAA45E;
     --Potential: #FFFFFF;
+    --Principled:#000000; 
 }
 /* ---------------------------------------- GLOBAL STYLES ----------------------------------------*/
 /* -------------------- BODY - HTML -------------------- */
@@ -79,12 +80,12 @@ html, body {
 .sr-only {
     position: absolute;
     transform: translateY(-100%);
-    background:var(--Intelligence-blue);
+    background:var(--Catalyst-orange);
     padding: 1rem;
     position: absolute;
     transition: transform 0.3s;
     font-size:1rem;
-    color:var(--Catalyst-orange);
+    color:var(--Systems-gray);
 }
 .sr-only:focus {
     transform: translateY(0%);
@@ -228,7 +229,7 @@ main > section:first-of-type section, main > section:nth-of-type(2) section  {
     background-color: var(--Intelligence-blue);
     margin: 1rem 0;
     border-radius: .5rem;
-    color: var(--Potential);
+    color:var(--Principled);
     padding: 1rem;
 }
 main > section:nth-of-type(2) section {
@@ -239,7 +240,7 @@ main a, footer a {
     margin: 1.5rem 0;
 }
 main > section:first-of-type section p {
-    color: var(--Potential);
+    color: var(--Systems-gray);
 }
 /* -------------------- FOOTER -------------------- */
 footer {
