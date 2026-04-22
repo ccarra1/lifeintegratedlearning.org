@@ -1,8 +1,5 @@
 /* -------------------- CSS BY CHRISTINA CARRASQUILLA 2026 -------------------- */
 
-/* IMPORTED FONTS */
-@import url("https://use.typekit.net/oay7eai.css");
-
 /* ---------------------------------------- CSS RESET ---------------------------------------- */
 /* http://meyerweb.com/eric/tools/css/reset/ 
     v2.0 | 20110126
@@ -54,14 +51,12 @@ table {
 
 /* ---------------------------------------- ROOT VARIABLES ---------------------------------------- */
 :root {
-	--Inquiry-indigo: #373557;
-    --Intelligence-blue: #3F83A3;
-    --Access-ivory: #F6F1E9;
-    --Systems-gray: #2F2F3A;
-    --Infrastructure-gray: #D9D9D9;
-    --Catalyst-orange: #FAA45E;
-    --Potential: #FFFFFF;
-    --Principled:#000000; 
+	--ASU-blue: #00a3e0;
+    --ASU-gray1: #000000;
+    --ASU-gray1:#191919;
+    --ASU-gray5: #d0d0d0;
+    --ASU-gold: #ffc627;
+    --ASU-white: #FFFFFF; 
 }
 /* ---------------------------------------- GLOBAL STYLES ----------------------------------------*/
 /* -------------------- BODY - HTML -------------------- */
@@ -69,8 +64,14 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     position: relative;
-    font-family: dolly-new, sans-serif;
+    font-family: Arial, Helvetica, “Nimbus Sans L”, “Liberation Sans”, FreeSans, sans-seriArial, sans-serif;
     min-width:337px;
+    background-color:var(--ASU-white);
+    background-image:
+        linear-gradient(rgba(120, 120, 120, 0.10) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(120, 120, 120, 0.10) 1px, transparent 1px);
+    background-size: 24px 24px;
+    background-position: top left;
 }
 html, body {
     overflow-x: hidden;
@@ -80,40 +81,33 @@ html, body {
 .sr-only {
     position: absolute;
     transform: translateY(-100%);
-    background:var(--Catalyst-orange);
+    background:var(--ASU-gold);
     padding: 1rem;
     position: absolute;
     transition: transform 0.3s;
     font-size:1rem;
-    color:var(--Systems-gray);
+    color:var(--ASU-gray1);
 }
 .sr-only:focus {
     transform: translateY(0%);
-    outline:2px solid var(--Potential);
+    outline:.25rem solid var(--ASU-white);
 }
 /* -------------------- HEADER -------------------- */
 header {
-    background-color: var(--Inquiry-indigo);
-    color:var(--Potential);
+    background-color: var(--ASU-gray1);
+    color:var(--ASU-white);
     padding-bottom: 2rem;
 }
-h1 {
-    font-size:3em;
-    padding-top: 3rem;
+header .wrapper {
+    display:flex;
 }
-h1 span {
-    font-size:.75em;
-    font-weight:normal;
-    font-family: dolly-new, sans-serif;
-}
-header h2 {
-    padding-top:.5rem;
-    font-family: dolly-new, sans-serif;
-    color:var(--Potential);
+header svg {
+    padding-right: 1rem;
 }
 /* -------------------- NAV -------------------- */
 nav {
-    background-color:var(--Catalyst-orange);
+    position: relative;
+    background-color:rgba(255,255,255,.65)
 }
 nav label {
     cursor: pointer;
@@ -121,90 +115,100 @@ nav label {
     padding: 2rem 0 0;
     user-select: none;
 }
-label span {
-    background-color:var(--Systems-gray);
+nav label span {
+    background-color: var(--ASU-gray1);
     display: block;
-    height: .25rem;
+    height: 0.25rem;
     position: relative;
-    transition: background-color .3s ease-out;
+    transition: background-color 0.3s ease-out;
     width: 2rem;
 }
-label span:before, label span:after {
-    background:var(--Systems-gray);
-    content: '';
+nav label span::before, nav label span::after {
+    background: var(--ASU-gray1);
+    content: "";
     display: block;
     height: 100%;
     position: absolute;
-    transition: all .2s ease-out;
     width: 100%;
+    transition: all 0.2s ease-out;
 }
-label span:before {
-    top: .75rem;
+nav label span::before {
+    top: 0.75rem;
 }
-label span:after {
-    top: -.75rem;
+nav label span::after {
+    top: -0.75rem;
 }
-input {
-    visibility:hidden;
-    height:0;
-}
-input:checked ~ ul {
-    max-height: 500px;
-}
-input:checked ~ label span {
-    background: transparent;
-}
-input:checked ~ label span:before {
-    transform: rotate(-45deg);
-}
-input:checked ~ label span:after {
-    transform: rotate(45deg);
-}
-input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
-    top: 0;
+nav input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
 }
 nav ul {
     display: grid;
     grid-template-columns: 1fr;
-    gap: .25rem;
-    overflow:hidden;
-    max-height:0;
+    gap: 0.25rem;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.35s ease;
+    list-style:none;
 }
-nav li a[href="#top"] {
-    border-radius:1rem 0 0 0;
-    width:5rem;
-    position:fixed;
-    bottom:0;
-    right:0;
+nav input:checked ~ ul {
+    max-height: 500px;
 }
-nav h2, #social h2, .hidden {
-    visibility: hidden;
-    height: 1px;
-    width: 1px;
+nav input:checked ~ label span {
+    background: transparent;
 }
-nav a#active {
-    background-color: transparent;
-    color: var(--Systems-gray);
-    border-bottom: 3px solid var(--Systems-gray);
-    border-radius: 0;
+nav input:checked ~ label span::before {
+    transform: rotate(-45deg);
+    top: 0;
 }
-nav li a, #contact a {
-    background-color: var(--Catalyst-orange);
-    border-radius: .5rem;
-    line-height: inherit;
-    font-family: dolly-new, sans-serif;
-    text-transform: uppercase;
-    text-decoration: none;
+nav input:checked ~ label span::after {
+    transform: rotate(45deg);
+    top: 0;
+}
+nav li {
+    font-size: 1em;
+    line-height:2;
+}
+nav li a {
+    color: var(--ASU-gray1);
     font-size: 1.25em;
-    color: var(--Systems-gray);
-    padding: .5rem;
-    display:flex;
-    align-items:center;
-    gap:.25rem;
-    width:90%;
+    line-height: inherit;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    width: 90%;
+    padding: 0.5rem 0.5rem 0.75rem;
+}
+nav li a::after {
+    content: "";
+    position: absolute;
+    left: 0.5rem;
+    bottom: 0.2rem;
+    width: calc(100% - 1rem);
+    height: .5rem;
+    background-color: var(--ASU-gold);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+nav li a:hover::after, nav li a:focus-visible::after {
+    transform: scaleX(1);
+}
+nav li a#active::after, nav li a.active::after {
+    transform: scaleX(1);
+}
+nav li a:focus-visible {
+    outline: .5rem solid var(--ASU-gold);
+    outline-offset: 4px;
 }
 nav li a:hover, main a:hover, #contact a:hover {
-    background-color: var(--Potential);
+    transform: none;
+}
+nav svg {
+    display:inline;
+    position:relative;
+    top:.75rem;
 }
 /* -------------------- .WRAPPER -------------------- */
 .wrapper {
@@ -217,65 +221,76 @@ nav li a:hover, main a:hover, #contact a:hover {
     padding:2rem 0;
 }
 /* -------------------- MAIN -------------------- */
-main > section:first-of-type {
-    background-color: var(--Infrastructure-gray);
-    padding-bottom: 2rem;
+main section {
+    padding:2rem 0;
 }
-main > section:nth-of-type(2) {
-    background-color: var(--Access-ivory);
-    padding-bottom: 2rem;
+main > section:nth-of-type(odd) {
+    background-color: rgba(208,208,208,.35);
 }
-main > section:first-of-type section, main > section:nth-of-type(2) section  {
-    background-color: var(--Intelligence-blue);
-    margin: 1rem 0;
+.card section, .card div  {
+    background-color: var(--ASU-blue);
+    margin: 1rem;
     border-radius: .5rem;
-    color:var(--Principled);
+    color:var(--ASU-gray1);
     padding: 1rem;
 }
-main > section:nth-of-type(2) section {
-    background-color: var(--Catalyst-orange);
-    color: var(--Systems-gray);
+#life-integrated-learning, #pizaz {
+    background-color:var(--ASU-gold);
 }
-main a, footer a {
-    margin: 1.5rem 0;
+main a {
+    display:flex;
+    background-color:var(--ASU-gold);
+    color:var(--ASU-gray1);
+    text-decoration:none;
+    border-radius: .5rem;
+    padding:.5rem;
+    margin:0 auto;
 }
-main > section:first-of-type section p {
-    color: var(--Systems-gray);
+main a strong {
+    position:relative;
+    top:.75rem;
+}
+main a:hover {
+    background-color:var(--ASU-white);
 }
 /* -------------------- FOOTER -------------------- */
 footer {
-    background-color: var(--Inquiry-indigo);
-    color: var(--Access-ivory);
-}
-footer {
+    background-color: var(--ASU-blue);
+    color: var(--ASU-gray1);
     padding: 1rem 0;
 }
-footer li {
-    color: var(--Potential);
+footer a {
+    margin: 1.5rem 0;
 }
 a[href="mailto:christina.carrasquilla@asu.edu"]  {
     margin: 1.5rem 0;
     max-width: 20rem;
 }
-/* -------------------- #SOCIAL -------------------- */
-#social {
-    text-align: center;
+/* -------------------- #CONTACT -------------------- */
+#contact svg:hover {
+    fill: var(--ASU-gold);
 }
-#social svg:hover {
-    fill: var(--Catalyst-orange);
-}
-#social a {
+#contact a {
     background-color: transparent;
     padding: 0;
     display: inline-block;
 }
 /* -------------------- ELEMENTS -------------------- */
 h1, h2, h3, h4 {
-    font-family: lust, cursive;
+    font-family: Arial;
+    font-weight:700;
+    letter-spacing:-1px;
 }
-
+h1 {
+    font-size:2em;
+    padding: 3rem 0;
+}
+h1 span {
+    font-size:.85em;
+    font-weight:normal;
+}
 h2 {
-    font-size: 1.75em;
+    font-size: 1.5em;
     padding-top: 2rem;
     line-height:1.25;
 }
@@ -284,28 +299,33 @@ h3 {
     padding-top: 1.5rem;
 }
 p {
-    font-family: dolly-new, sans-serif;
     line-height: 1.5;
     font-size: 1em;
-    color: var(--Systems-gray);
-    padding: 1rem 0;
+    color: var(--ASU-gray1);
+    padding-bottom:.5rem;
+}
+ul {
+    list-style:disc;
+    margin-left:3rem;
+}
+ol {
+    list-style:decimal;
+    margin:1rem 0 1rem 1rem;
 }
 ul, iframe {
     padding: 1rem 0;
 }
 li {
-    font-family: dolly-new, sans-serif;
     line-height: 1.5;
     font-size: 1em;
-    color: var(--Systems-gray);
+    color: var(--ASU-gray1);
 }
 q {
     display: block;
-    font-family: dolly-new, sans-serif;
-    font-size: 2em;
+    font-size: 1.5em;
     line-height: 1.5;
     padding: 1rem 0;
-    color: var(--Inquiry-indigo);
+    color: var(--ASU-gray1);
 }
 i {
     font-style:italic;
@@ -315,9 +335,9 @@ strong {
 }
 .highlight {
     font-weight:600;
-    background-color:var(--Catalyst-orange);
+    background-color:var(--ASU-gold);
     border-radius:.2rem;
-    color:var(--Systems-gray);
+    color:var(--ASU-gray1);
     padding:.25em 0;
     line-height:2;
 }
@@ -328,42 +348,29 @@ svg {
 }
 /* -------------------- READ -------------------- */
 #paper-title {
-    font-family: dolly-new, sans-serif;
     font-size:2em;
     line-height:1.5;
 }
-article ul {
-    list-style:disc;
-    margin-left:3rem;
-}
-article ol {
-    list-style:decimal;
-    margin:1rem 0 1rem 1rem;
-}
 article a {
-    color:var(--Intelligence-blue);
+    color:var(--ASU-blue);
 }
 article a:hover {
-    color:var(--Catalyst-orange);
+    color:var(--ASU-gold);
 }
 article a:visited {
-    color:var(--Inquiry-indigo);
+    color:var(--ASU-blue);
 } 
-.author {
-    text-transform:uppercase;
-    font-size:1.25em;
-}
 .links-out, .links-out svg {
     display:inline-block;
     text-decoration: none;
 }
 .links-out{
-    color:var(--Intelligence-blue);
-    border-bottom:2px solid var(--Intelligence-blue);
+    color:var(--ASU-blue);
+    border-bottom:2px solid var(--ASU-blue);
     padding-bottom:.25rem;
 }
 .links-out:hover {
-    border-bottom:2px solid var(--Catalyst-orange);
+    border-bottom:2px solid var(--ASU-gold);
 }
 /* -------------------- LISTEN -------------------- */
 video {
@@ -385,9 +392,9 @@ video {
     }
     footer .wrapper {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 2fr 1fr;
     }
-    #social {
+    #contact {
         text-align: right;
     }
 }
