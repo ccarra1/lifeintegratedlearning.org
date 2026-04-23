@@ -98,12 +98,6 @@ header {
     color:var(--ASU-white);
     padding-bottom: 2rem;
 }
-header .wrapper {
-    display:flex;
-}
-header svg {
-    padding-right: 1rem;
-}
 /* -------------------- NAV -------------------- */
 nav {
     position: relative;
@@ -224,7 +218,7 @@ nav svg {
 main section {
     padding:2rem 0;
 }
-main > section:nth-of-type(odd) {
+.gray {
     background-color: rgba(208,208,208,.35);
 }
 .card section, .card div  {
@@ -234,24 +228,23 @@ main > section:nth-of-type(odd) {
     color:var(--ASU-gray1);
     padding: 1rem;
 }
-#life-integrated-learning, #pizaz {
+.gold {
     background-color:var(--ASU-gold);
-}
-main a {
-    display:flex;
-    background-color:var(--ASU-gold);
-    color:var(--ASU-gray1);
-    text-decoration:none;
-    border-radius: .5rem;
-    padding:.5rem;
-    margin:0 auto;
 }
 main a strong {
     position:relative;
     top:.75rem;
 }
-main a:hover {
-    background-color:var(--ASU-white);
+table {
+    margin: 1rem auto;
+    border-collapse:collapse;
+}
+th {
+    font-weight: bold;
+}
+th, td {
+    padding:.5rem 1rem;
+    border:1px solid var(--ASU-gray1);
 }
 /* -------------------- FOOTER -------------------- */
 footer {
@@ -276,7 +269,7 @@ a[href="mailto:christina.carrasquilla@asu.edu"]  {
     display: inline-block;
 }
 /* -------------------- ELEMENTS -------------------- */
-h1, h2, h3, h4 {
+h1, h2, h3, h4, table caption {
     font-family: Arial;
     font-weight:700;
     letter-spacing:-1px;
@@ -291,12 +284,12 @@ h1 span {
 }
 h2 {
     font-size: 1.5em;
-    padding-top: 2rem;
+    padding: 1rem 0;
     line-height:1.25;
 }
-h3 {
+h3, h4, table caption {
     font-size: 1.25em;
-    padding-top: 1.5rem;
+    padding: 1rem 0;
 }
 p {
     line-height: 1.5;
@@ -330,6 +323,18 @@ q {
 i {
     font-style:italic;
 }
+.cta {
+    display:flex;
+    background-color:var(--ASU-gold);
+    color:var(--ASU-gray1);
+    text-decoration:none;
+    border-radius: .5rem;
+    padding:.5rem;
+    margin:0 auto;
+}
+.cta:hover {
+    background-color:var(--ASU-white);
+}
 strong {
     font-weight:bold;
 }
@@ -340,6 +345,10 @@ strong {
     color:var(--ASU-gray1);
     padding:.25em 0;
     line-height:2;
+}
+.activates {
+    font-weight:bold;
+    font-style:italic;
 }
 svg {
     max-width: 100%;
@@ -413,10 +422,31 @@ video {
 }
 /* ---------------------------------------- MEDIA QUERY FOR LARGE STYLES ---------------------------------------- */
 @media screen and (min-width:900px) {
+    header .wrapper {
+        display:flex;
+    }
+    header svg {
+        padding-right: 1rem;
+    }
     .card {
         grid-template-columns: 1fr 1fr 1fr;
     }
     .card section:last-child:nth-child(odd) {
         grid-column: span 1;
     }
+    .design-areas {
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:1rem;
+    }
+    .design-areas section {
+        background-color:rgba(208,208,208,.35);
+        border:1px solid var(--ASU-gray1);
+        border-radius:.5rem;
+        padding:1rem;
+    }
+    .case-study section {
+        background-color:rgba(255,255,255,.65);
+    }
+
 }
