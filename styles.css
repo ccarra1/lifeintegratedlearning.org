@@ -52,11 +52,11 @@ table {
 /* ---------------------------------------- ROOT VARIABLES ---------------------------------------- */
 :root {
 	--ASU-blue: #00a3e0;
-    --ASU-gray1: #000000;
     --ASU-gray1:#191919;
     --ASU-gray5: #d0d0d0;
     --ASU-gold: #ffc627;
-    --ASU-white: #FFFFFF; 
+    --ASU-white: #FFFFFF;
+    --ASU-black: #000000; 
 }
 /* ---------------------------------------- GLOBAL STYLES ----------------------------------------*/
 /* -------------------- BODY - HTML -------------------- */
@@ -382,17 +382,15 @@ article a:visited {
     border-bottom:2px solid var(--ASU-gold);
 }
 /* -------------------- LISTEN -------------------- */
-video {
-    border-radius:1rem;
-    margin:2rem 0;
-    width:100%;
-    max-width:600px;
-    height:100%;
-}
 #tagline {
     font-weight:400;
 }
-/* ---------------------------------------- MEDIA QUERY FOR MEDIUM STYLES---------------------------------------- */
+.season {
+    display:grid;
+    grid-template-columns:1fr;
+    gap:1rem;
+}
+/* ---------------------------------------- MEDIA QUERY FOR SMALL STYLES---------------------------------------- */
 @media screen and (min-width:550px) {
     .card {
         display: grid;
@@ -402,6 +400,10 @@ video {
     .card section:last-child:nth-child(odd) {
         grid-column: span 2;
     }
+    .season {
+        display:grid;
+        grid-template-columns:1fr 1fr;
+}
     footer .wrapper {
         display: grid;
         grid-template-columns: 2fr 1fr;
@@ -410,7 +412,7 @@ video {
         text-align: right;
     }
 }
-/* ---------------------------------------- MEDIA QUERY FOR FULL NAV---------------------------------------- */
+/* ---------------------------------------- MEDIA QUERY FOR MEDIUM STYLES---------------------------------------- */
 @media screen and (min-width:730px) {
     nav ul {
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -422,6 +424,10 @@ video {
         visibility:hidden;
         height:0;
     }
+    .season {
+        display:grid;
+        grid-template-columns:1fr 1fr 1fr;
+}
 }
 /* ---------------------------------------- MEDIA QUERY FOR LARGE STYLES ---------------------------------------- */
 @media screen and (min-width:900px) {
@@ -451,5 +457,9 @@ video {
     .case-study section {
         background-color:rgba(255,255,255,.65);
     }
+    .season {
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+}
 
 }
