@@ -199,7 +199,7 @@ nav li a:focus-visible {
 nav li a:hover, main a:hover, #contact a:hover {
     transform: none;
 }
-nav svg {
+nav svg, main svg {
     display:inline;
     position:relative;
     top:.75rem;
@@ -388,6 +388,9 @@ video {
     width:100%;
     max-width:600px;
     height:100%;
+}
+#tagline {
+    font-weight:400;
 }
 /* ---------------------------------------- MEDIA QUERY FOR MEDIUM STYLES---------------------------------------- */
 @media screen and (min-width:550px) {
