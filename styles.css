@@ -67,7 +67,7 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     position: relative;
-    font-family: Arial, Helvetica, “Nimbus Sans L”, “Liberation Sans”, FreeSans, sans-seriArial, sans-serif;
+    font-family: Arial, Helvetica, “Nimbus Sans L”, “Liberation Sans”, FreeSans, sans-serif;
     min-width:337px;
     background-color:var(--ASU-white);
     background-image:
@@ -393,7 +393,7 @@ menu {
     padding:.5rem;
     border-radius:.5rem;
     position:sticky;
-    top:ß0;
+    top:0;
 }
 .reading-tools li {
     padding:0 .5rem 1rem .5rem;
