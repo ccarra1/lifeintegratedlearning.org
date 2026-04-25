@@ -204,6 +204,26 @@ nav svg, main svg {
     position:relative;
     top:.75rem;
 }
+#back-to-top {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    display: inline-block;
+    border-radius:1rem;
+    text-decoration: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    background-color:var(--ASU-white);
+}
+#back-to-top.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+#back-to-top:hover {
+    background-color:var(--ASU-gold);
+}
+
 /* -------------------- .WRAPPER -------------------- */
 .wrapper {
     width: 90%;
@@ -397,6 +417,19 @@ article a:visited {
     background-color:var(--ASU-blue);
     border-radius:1rem;
     padding:1rem;
+}
+.season img {
+    width:100%;
+}
+dl {
+    display:flex;
+    background-color:var(--ASU-gold);
+    padding:.5rem;
+    border-radius:.25rem;
+}
+dt {
+    font-weight:bold;
+    padding-right:.5rem;
 }
 /* ---------------------------------------- MEDIA QUERY FOR SMALL STYLES---------------------------------------- */
 @media screen and (min-width:550px) {
