@@ -60,6 +60,9 @@ table {
 }
 /* ---------------------------------------- GLOBAL STYLES ----------------------------------------*/
 /* -------------------- BODY - HTML -------------------- */
+* {
+    box-sizing:border-box;
+}
 body {
     display: grid;
     grid-template-columns: 1fr;
@@ -292,11 +295,11 @@ a[href="mailto:christina.carrasquilla@asu.edu"]  {
 h1, h2, h3, h4, table caption {
     font-family: Arial;
     font-weight:700;
-    letter-spacing:-1px;
 }
 h1 {
     font-size:2em;
     padding: 3rem 0;
+    letter-spacing:-1px;
 }
 h1 span {
     font-size:.85em;
@@ -306,10 +309,12 @@ h2 {
     font-size: 1.5em;
     padding: 1rem 0;
     line-height:1.25;
+    letter-spacing:-.75px;
 }
 h3, h4, table caption {
     font-size: 1.25em;
     padding: 1rem 0;
+    font-weight:600;
 }
 p {
     line-height: 1.5;
@@ -379,6 +384,31 @@ svg {
     display: block;
 }
 /* -------------------- READ -------------------- */
+menu {
+    background-color:var(--ASU-blue);
+    list-style:none;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr 1fr 1fr;
+    gap:1rem;
+    padding:.5rem;
+    border-radius:.5rem;
+    position:sticky;
+    top:ß0;
+}
+.reading-tools li {
+    padding:0 .5rem 1rem .5rem;
+}
+.reading-tools a {
+    text-decoration: none;
+    cursor: pointer;
+}
+.reading-tools path:hover{
+    fill:var(--ASU-black);
+}
+#speak-btn[aria-pressed="true"] {
+    background: #333;
+    color: white;
+    }
 #paper-title {
     font-size:2em;
     line-height:1.5;
@@ -420,6 +450,12 @@ article a:visited {
 }
 .season img {
     width:100%;
+}
+.date {
+    text-transform:uppercase;
+    font-size:.75em;
+    color:var(--ASU-white);
+    font-weight:600;
 }
 dl {
     display:flex;
