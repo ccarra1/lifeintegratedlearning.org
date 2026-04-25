@@ -86,7 +86,7 @@ html, body {
     position: absolute;
     transition: transform 0.3s;
     font-size:1rem;
-    color:var(--ASU-gray1);
+    color:var(--ASU-black);
 }
 .sr-only:focus {
     transform: translateY(0%);
@@ -94,7 +94,7 @@ html, body {
 }
 /* -------------------- HEADER -------------------- */
 header {
-    background-color: var(--ASU-gray1);
+    background-color: var(--ASU-black);
     color:var(--ASU-white);
     padding-bottom: 2rem;
 }
@@ -249,7 +249,7 @@ th, td {
 /* -------------------- FOOTER -------------------- */
 footer {
     background-color: var(--ASU-blue);
-    color: var(--ASU-gray1);
+    color: var(--ASU-black);
     padding: 1rem 0;
 }
 footer a {
@@ -326,11 +326,14 @@ i {
 .cta {
     display:flex;
     background-color:var(--ASU-gold);
-    color:var(--ASU-gray1);
+    color:var(--ASU-black);
     text-decoration:none;
     border-radius: .5rem;
     padding:.5rem;
     margin:0 auto;
+}
+.cta svg {
+    top:0;
 }
 .cta:hover {
     background-color:var(--ASU-white);
@@ -390,6 +393,11 @@ article a:visited {
     grid-template-columns:1fr;
     gap:1rem;
 }
+.season section {
+    background-color:var(--ASU-blue);
+    border-radius:1rem;
+    padding:1rem;
+}
 /* ---------------------------------------- MEDIA QUERY FOR SMALL STYLES---------------------------------------- */
 @media screen and (min-width:550px) {
     .card {
@@ -400,7 +408,7 @@ article a:visited {
     .card section:last-child:nth-child(odd) {
         grid-column: span 2;
     }
-    .season {
+        .season {
         display:grid;
         grid-template-columns:1fr 1fr;
 }
@@ -424,10 +432,6 @@ article a:visited {
         visibility:hidden;
         height:0;
     }
-    .season {
-        display:grid;
-        grid-template-columns:1fr 1fr 1fr;
-}
 }
 /* ---------------------------------------- MEDIA QUERY FOR LARGE STYLES ---------------------------------------- */
 @media screen and (min-width:900px) {
@@ -459,7 +463,7 @@ article a:visited {
     }
     .season {
     display:grid;
-    grid-template-columns:1fr 1fr 1fr 1fr;
+    grid-template-columns:1fr 1fr 1fr;
 }
 
 }
