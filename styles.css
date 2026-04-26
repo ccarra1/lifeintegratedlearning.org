@@ -349,11 +349,11 @@ i {
     font-style:italic;
 }
 dl {
-    display:flex;
     background-color:var(--ASU-black);
     color:var(--ASU-white);
     padding:.5rem;
     border-radius:.25rem;
+    line-height:1.25;
 }
 dt {
     font-weight:bold;
@@ -496,6 +496,9 @@ article a:visited {
     label, label span, input {
         visibility:hidden;
         height:0;
+    }
+    dl {
+        display:flex;
     }
 }
 /* ---------------------------------------- MEDIA QUERY FOR LARGE STYLES ---------------------------------------- */
