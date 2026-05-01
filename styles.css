@@ -359,6 +359,15 @@ dt {
     font-weight:bold;
     padding-right:.5rem;
 }
+small {
+    margin:2rem 0;
+}
+small a {
+    color:var(--ASU-white);
+}
+small a:visited {
+    color:var(--ASU-gray1);
+}
 .cta {
     display:inline-block;
     background-color:var(--ASU-white);
