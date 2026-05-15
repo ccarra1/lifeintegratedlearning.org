@@ -275,6 +275,9 @@ footer {
     color: var(--ASU-black);
     padding: 1rem 0;
 }
+footer div div {
+    margin-top:3rem;
+}
 footer a {
     margin: 1.5rem 0;
 }
@@ -360,6 +363,7 @@ dt {
     padding-right:.5rem;
 }
 small {
+    font-size:.75em;
     margin:2rem 0;
 }
 small a {
@@ -458,9 +462,6 @@ article a:visited {
     border-radius:1rem;
     padding:1rem;
 }
-.season img {
-    width:100%;
-}
 .date {
     text-transform:uppercase;
     font-size:.75em;
@@ -482,10 +483,6 @@ article a:visited {
     .card section:last-child:nth-child(odd) {
         grid-column: span 2;
     }
-    .season {
-        display:grid;
-        grid-template-columns:1fr 1fr;
-}
     footer .wrapper {
         display: grid;
         grid-template-columns: 2fr 1fr;
@@ -543,7 +540,7 @@ article a:visited {
     }
     .season {
     display:grid;
-    grid-template-columns:1fr 1fr 1fr;
+    grid-template-columns:1fr 1fr;
 }
 }
 /* ---------------------------------------- MEDIA QUERY FOR PRINT ---------------------------------------- */
