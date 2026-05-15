@@ -458,7 +458,7 @@ article a:visited {
     gap:1rem;
 }
 .season section {
-    border:1px solid var(--ASU-gray5);
+    border:1px solid var(--ASU-gray1);
     border-radius:1rem;
     background-color: rgba(208,208,208,.35);
     padding:1rem;
